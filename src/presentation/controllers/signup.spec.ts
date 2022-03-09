@@ -1,6 +1,7 @@
 import { SignUpController } from './signup'
 import { EmailValidator } from '../protocols'
 import { MissingParamError,InvalidParamError, ServerError } from '../errors'
+
 interface SutTypes{
     sut: SignUpController
     emailValidatorStub: EmailValidator 
@@ -64,6 +65,23 @@ describe('SignUp Controller',()=>{
         const httpResponse = sut.handle(httpRequest)
         expect(httpResponse.statusCode).toBe(400)
         expect(httpResponse.body).toEqual(new MissingParamError('email'))
+    })
+
+    test('Should return 400 if no email is confirmation fails',()=>{
+        //criar um system under test
+        const {sut} = makeSut()
+        //invocar uma funcao de sut
+        const httpRequest = {
+            body:{
+                name:"any_name",
+                email:"any@email.com",
+                password:"any_pass",
+                password_confirmation:"invalid_password"
+            }
+        }
+        const httpResponse = sut.handle(httpRequest)
+        expect(httpResponse.statusCode).toBe(400)
+        expect(httpResponse.body).toEqual(new InvalidParamError('passwordConfirmation'))
     })
 
     test('Should return 400 if param is invalid',()=>{
