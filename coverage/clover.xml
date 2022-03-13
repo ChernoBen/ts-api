@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1647179731115" clover="3.2.0">
-  <project timestamp="1647179731116" name="All files">
+<coverage generated="1647180031537" clover="3.2.0">
+  <project timestamp="1647180031537" name="All files">
     <metrics statements="328" coveredstatements="195" conditionals="49" coveredconditionals="33" methods="37" coveredmethods="21" elements="414" coveredelements="249" complexity="0" loc="328" ncloc="328" packages="17" files="34" classes="34"/>
     <package name="data.protocols">
       <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -471,7 +471,7 @@
     </package>
     <package name="presentation.utils">
       <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="email-validator.ts" path="/Users/benjamimfranciscodesousaneto/Documents/treinamento/clean-node-api/src/presentation/utils/email-validator.ts">
+      <file name="email-validator-adapter.ts" path="/Users/benjamimfranciscodesousaneto/Documents/treinamento/clean-node-api/src/presentation/utils/email-validator-adapter.ts">
         <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
