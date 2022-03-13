@@ -1,4 +1,3 @@
-//import {EmailValidator} from '../protocols/email-validator'
 import {EmailValidatorAdapter} from './email-validator'
 import validator from 'validator'
 
