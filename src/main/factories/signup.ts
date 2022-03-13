@@ -1,10 +1,14 @@
-import {SignUpController} from '../../presentation/controllers/signup/signup'
-//import {} from '../'
+import { SignUpController } from '../../presentation/controllers/signup/signup'
+import { EmailValidatorAdapter } from '../../presentation/utils/email-validator-adapter'
+import { DbAddAccount } from  '../../data/usecases/add-account/db-add-account'
+import {BcryptAdapter} from '../../infra/cryptography/bcrypt-adapter'
+import {AccountMongoRepository} from '../../infra/db/mongodb/account-repository/account'
 
-/*
 export const makeSignUpController = (): SignUpController => {
-    const 
-    const signupController = new SignUpController()
-    return signupController
+    const salt = 12
+    const emailValidatorAdapter = new EmailValidatorAdapter()
+    const bcryptAdapter = new BcryptAdapter(salt)
+    const accountMongoRepository = new AccountMongoRepository()
+    const dbAddAccount = new DbAddAccount(bcryptAdapter,accountMongoRepository)
+    return new SignUpController(emailValidatorAdapter,dbAddAccount)
 }
-*/
